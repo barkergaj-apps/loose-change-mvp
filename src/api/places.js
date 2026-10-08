@@ -1,4 +1,9 @@
-import { PLACES_FIELD_MASK, PLACES_MAX_RESULTS, PLACES_SEARCH_NEARBY_URL } from '../constants.js';
+import {
+  PLACES_FIELD_MASK,
+  PLACES_LANGUAGE_CODE,
+  PLACES_MAX_RESULTS,
+  PLACES_SEARCH_NEARBY_URL,
+} from '../constants.js';
 
 export const searchNearby = async ({ apiKey, types, center, radius }) => {
   const response = await fetch(PLACES_SEARCH_NEARBY_URL, {
@@ -11,6 +16,7 @@ export const searchNearby = async ({ apiKey, types, center, radius }) => {
     body: JSON.stringify({
       includedTypes: types,
       maxResultCount: PLACES_MAX_RESULTS,
+      languageCode: PLACES_LANGUAGE_CODE,
       rankPreference: 'DISTANCE',
       locationRestriction: {
         circle: {

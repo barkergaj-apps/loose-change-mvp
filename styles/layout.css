@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px 48px;
+  display: flex;
+  justify-content: center;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font);
+}
+
+.app {
+  width: 100%;
+  max-width: 420px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 26px;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  font-size: 14px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.hidden {
+  display: none;
+}

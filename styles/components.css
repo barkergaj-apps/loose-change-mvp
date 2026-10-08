@@ -1,0 +1,148 @@
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  border: 0;
+  padding: 10px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--color-chip);
+  color: var(--color-ink);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--color-chip-active);
+  font-weight: 600;
+}
+
+.range {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.range input {
+  flex: 1;
+  accent-color: var(--color-accent);
+}
+
+.range output {
+  min-width: 56px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.dial-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.dial {
+  width: 180px;
+  height: 180px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow:
+    var(--shadow-dial),
+    inset 0 0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+.dial:active {
+  background: var(--color-accent-dark);
+}
+
+.dial:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.result {
+  padding: 20px;
+  border-radius: var(--radius-card);
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+}
+
+.result-place {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.result-address {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.result-distance {
+  margin: 4px 0 16px;
+  font-size: 14px;
+}
+
+.dare {
+  padding: 14px;
+  border-radius: var(--radius-button);
+  background: var(--color-chip);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.dare-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.button {
+  flex: 1;
+  border: 0;
+  padding: 12px;
+  border-radius: var(--radius-button);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.button-ghost {
+  background: var(--color-chip);
+  color: var(--color-ink);
+}
+
+.message {
+  margin: 0;
+  padding: 8px 0;
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.message-error {
+  color: var(--color-error);
+}

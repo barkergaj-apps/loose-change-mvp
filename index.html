@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loose Change</title>
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Loose Change</h1>
+      <p class="subtitle">Pick your nerve, pick a vibe, spin.</p>
+
+      <section>
+        <h2 class="section-title">Nerve level</h2>
+        <div class="chips" id="nerve-chips"></div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Category</h2>
+        <div class="chips" id="category-chips"></div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Distance</h2>
+        <div class="range">
+          <input type="range" id="distance-input" />
+          <output id="distance-output"></output>
+        </div>
+      </section>
+
+      <div class="dial-wrap">
+        <button class="dial" id="dial" type="button">Spin</button>
+      </div>
+
+      <section class="result hidden" id="result"></section>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

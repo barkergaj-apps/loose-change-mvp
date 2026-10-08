@@ -56,6 +56,7 @@ Distance range and defaults are in `src/constants.js`.
 
 ```
 index.html              markup only
+assets/                 favicon and touch icon
 styles/                 tokens (colors, radii), layout, components
 src/main.js             wires the selectors and the Spin button
 src/spin.js             one spin: location -> Places -> random place -> dare

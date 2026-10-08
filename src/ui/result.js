@@ -3,7 +3,7 @@ import { directionsLink } from '../helpers/mapsLink.js';
 const show = (container, html) => {
   container.innerHTML = html;
   container.classList.remove('hidden');
-  container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  container.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
 
 const escapeHtml = (text) => {

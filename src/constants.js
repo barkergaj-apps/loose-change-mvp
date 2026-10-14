@@ -1,12 +1,11 @@
-export const DISTANCE_MIN_METERS = 500;
-export const DISTANCE_MAX_METERS = 5000;
-export const DISTANCE_STEP_METERS = 500;
-export const DISTANCE_DEFAULT_METERS = 1500;
+export const DISTANCE_OPTIONS_KM = [1, 2, 5, 10, 15, 20, 30];
+export const DISTANCE_DEFAULT_INDEX = 2;
 
-export const DEFAULT_NERVE_ID = 'curious';
-export const DEFAULT_CATEGORY_ID = 'cafe';
+export const DEFAULT_NERVE_ID = 'low';
+export const DEFAULT_CATEGORY_ID = 'random';
 
 export const PLACES_MAX_RESULTS = 20;
+export const PLACES_RANK_PREFERENCE = 'POPULARITY';
 export const GEOLOCATION_TIMEOUT_MS = 20000;
 export const METERS_PER_KM = 1000;
 

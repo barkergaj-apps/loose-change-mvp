@@ -2,6 +2,7 @@ import {
   PLACES_FIELD_MASK,
   PLACES_LANGUAGE_CODE,
   PLACES_MAX_RESULTS,
+  PLACES_RANK_PREFERENCE,
   PLACES_SEARCH_NEARBY_URL,
 } from '../constants.js';
 
@@ -17,7 +18,7 @@ export const searchNearby = async ({ apiKey, types, center, radius }) => {
       includedTypes: types,
       maxResultCount: PLACES_MAX_RESULTS,
       languageCode: PLACES_LANGUAGE_CODE,
-      rankPreference: 'DISTANCE',
+      rankPreference: PLACES_RANK_PREFERENCE,
       locationRestriction: {
         circle: {
           center: { latitude: center.latitude, longitude: center.longitude },

@@ -1,10 +1,9 @@
 import {
   DEFAULT_CATEGORY_ID,
   DEFAULT_NERVE_ID,
-  DISTANCE_DEFAULT_METERS,
-  DISTANCE_MAX_METERS,
-  DISTANCE_MIN_METERS,
-  DISTANCE_STEP_METERS,
+  DISTANCE_DEFAULT_INDEX,
+  DISTANCE_OPTIONS_KM,
+  METERS_PER_KM,
 } from './constants.js';
 import { CATEGORIES } from './data/categories.js';
 import { NERVE_LEVELS } from './data/nerveLevels.js';
@@ -26,7 +25,7 @@ const elements = {
 const selection = {
   nerveId: DEFAULT_NERVE_ID,
   categoryId: DEFAULT_CATEGORY_ID,
-  distance: DISTANCE_DEFAULT_METERS,
+  distance: DISTANCE_OPTIONS_KM[DISTANCE_DEFAULT_INDEX] * METERS_PER_KM,
 };
 
 const loadApiKey = async () => {
@@ -80,12 +79,12 @@ const onSpin = async () => {
   }
 };
 
-elements.distanceInput.min = DISTANCE_MIN_METERS;
-elements.distanceInput.max = DISTANCE_MAX_METERS;
-elements.distanceInput.step = DISTANCE_STEP_METERS;
-elements.distanceInput.value = DISTANCE_DEFAULT_METERS;
+elements.distanceInput.min = 0;
+elements.distanceInput.max = DISTANCE_OPTIONS_KM.length - 1;
+elements.distanceInput.step = 1;
+elements.distanceInput.value = DISTANCE_DEFAULT_INDEX;
 elements.distanceInput.addEventListener('input', (event) => {
-  selection.distance = Number(event.target.value);
+  selection.distance = DISTANCE_OPTIONS_KM[Number(event.target.value)] * METERS_PER_KM;
   elements.distanceOutput.textContent = formatDistance(selection.distance);
 });
 elements.dial.addEventListener('click', onSpin);
